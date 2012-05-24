@@ -1,9 +1,5 @@
-" /etc/vimrc (configuration file for vim only)
-" author: Klaus Franken     <kfr@suse.de>
-" author: Werner Fink       <werner@suse.de> 
-" author: Florian La Roche  <florian@suse.de> 
-" version: 00/01/20
-" commented lines start with `"'
+set langmenu=en
+language mes en
 
 " enable syntax highlighting
  syntax on
@@ -286,4 +282,3 @@ map <MouseUp> <C-U>
 map <ScrollWheelDown> <C-D>
 map <S-ScrollWheelDown> <C-D>
 set ttyscroll=100
-"set errorformat+="rt/"%f:%l:\ %m
