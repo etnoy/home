@@ -1,5 +1,3 @@
-set langmenu=en
-language mes en
 
 " enable syntax highlighting
  syntax on
@@ -64,7 +62,7 @@ if myterm == "xterm" || myterm == "kvt" || myterm == "gnome"
     map! <ESC>Om  -
     map! <ESC>Ok  +
     map! <ESC>Ol  ,
-    map! <ESC>OM  
+    map! <ESC>OM  
     map! <ESC>Ow  7
     map! <ESC>Ox  8
     map! <ESC>Oy  9
@@ -82,7 +80,7 @@ if myterm == "xterm" || myterm == "kvt" || myterm == "gnome"
     map <ESC>Om  -
     map <ESC>Ok  +
     map <ESC>Ol  ,
-    map <ESC>OM  
+    map <ESC>OM  
     map <ESC>Ow  7
     map <ESC>Ox  8
     map <ESC>Oy  9
@@ -263,12 +261,9 @@ hi CursorLine   cterm=NONE ctermbg=darkblue
 nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
 set nobackup
 set background=dark
-colorscheme torte
 set encoding=utf-8
     set spell
  
-    " Set local language 
-    setlocal spell spelllang=en_us
 
 filetype indent on
 let g:tex_flavor='latex'
