@@ -92,7 +92,6 @@ nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
 set nobackup
 set background=dark
 set encoding=utf-8
-set spell
  
 filetype indent on
 set shellslash
