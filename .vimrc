@@ -1,3 +1,5 @@
+
+set nocompatible
 " select case-insenitiv search (not default)
 set ignorecase
 set smartcase
@@ -27,7 +29,6 @@ set esckeys
 " get easier to use and more user friendly vim defaults
 " CAUTION: This option breaks some vi compatibility. 
 "          Switch it off if you prefer real vi compatibility
-set nocompatible
 
 " Complete longest common string, then each full match
 " enable this for bash compatible behaviour
@@ -62,9 +63,9 @@ set number
 
 
 " Needed for Syntax Highlighting and stuff
-"filetype on
-"filetype plugin on
-"syntax enable
+filetype on
+filetype plugin on
+syntax enable
 set grepprg=grep\ -nH\ $*
 
 " Who doesn't like autoindent?
@@ -98,11 +99,15 @@ set shellslash
 set grepprg=grep\ -nH\ $*
 set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
-map <ScrollWheelUp> <C-U>
-map <MouseUp> <C-U>
-map <ScrollWheelDown> <C-D>
-map <S-ScrollWheelDown> <C-D>
+let g:tex_flavor='latex'
+"map <ScrollWheelUp> <C-U>
+"map <MouseUp> <C-U>
+"map <ScrollWheelDown> <C-D>
+"map <S-ScrollWheelDown> <C-D>
 let g:Tex_DefaultTargetFormat='pdf'
 let g:tex_flavor='latex'
 let g:Tex_CompileRule_dvi = 'latex -interaction=nonstopmode -file-line-error-style $*'
 let g:Tex_CompileRule_pdf = 'pdflatex -interaction=nonstopmode -file-line-error-style $*'
+autocmd Filetype tex set textwidth=80
+autocmd Filetype tex set linebreak
+set hidden
