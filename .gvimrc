@@ -1,2 +1,4 @@
-	set background=dark
-	colorscheme torte
+set background=dark
+colorscheme jellybeans
+colors jellybeans
+set guifont=Consolas:h11

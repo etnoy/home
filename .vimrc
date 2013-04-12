@@ -1,3 +1,9 @@
+if has('win32') || has('win64')
+    " Make windows use ~/.vim too, I don't want to use _vimfiles
+    set runtimepath^=~/.vim
+endif
+
+
 
 set nocompatible
 " select case-insenitiv search (not default)
@@ -40,6 +46,9 @@ set backspace=2
 " Remove Character Under The Cursor (RCUTC[tm])
 map! <Esc>[3~ <Delete>
 map  <ESC>[3~    x
+
+set langmenu=en_US.UTF-8    " sets the language of the menu (gvim)
+language mes en
 
 " Only do this part when compiled with support for autocommands. 
 if has("autocmd") 
@@ -115,7 +124,6 @@ autocmd Filetype tex set textwidth=80
 autocmd Filetype tex set linebreak
 set hidden
 
-
 " Set the warning messages to ignore.
 let g:Tex_IgnoredWarnings =
 \"Underfull\n".
@@ -134,3 +142,5 @@ autocmd Filetype tex setlocal nofoldenable
 let g:Imap_UsePlaceHolders = 0
 
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+
+colors jellybeans
