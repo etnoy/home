@@ -61,8 +61,11 @@ set mouse=a
 set background=dark
 set number
 
+call pathogen#infect()
+call pathogen#helptags()
 
 " Needed for Syntax Highlighting and stuff
+let g:Powerline_symbols = 'fancy'
 filetype on
 filetype plugin on
 syntax enable
@@ -111,3 +114,23 @@ let g:Tex_CompileRule_pdf = 'pdflatex -interaction=nonstopmode -file-line-error-
 autocmd Filetype tex set textwidth=80
 autocmd Filetype tex set linebreak
 set hidden
+
+
+" Set the warning messages to ignore.
+let g:Tex_IgnoredWarnings =
+\"Underfull\n".
+\"Overfull\n".
+\"specifier changed to\n".
+\"You have requested\n".
+\"Missing number, treated as zero.\n".
+\"There were undefined references\n".
+\"Citation %.%# undefined\n".
+\'LaTeX Font Warning:'"
+" This number N says that latex-suite should ignore the first N of the above.
+let g:Tex_IgnoreLevel = 8
+let g:Tex_Env_theorem = "\\begin{theorem}\<CR><++>\<CR>\\end{theorem}"
+let g:Tex_Env_align = "\\begin{align}\<CR><++>\<CR>\\end{align}"
+autocmd Filetype tex setlocal nofoldenable
+let g:Imap_UsePlaceHolders = 0
+
+set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
