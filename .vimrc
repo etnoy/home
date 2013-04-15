@@ -3,8 +3,6 @@ if has('win32') || has('win64')
     set runtimepath^=~/.vim
 endif
 
-
-
 set nocompatible
 " select case-insenitiv search (not default)
 set ignorecase
@@ -48,7 +46,8 @@ map! <Esc>[3~ <Delete>
 map  <ESC>[3~    x
 
 set langmenu=en_US.UTF-8    " sets the language of the menu (gvim)
-language mes en
+
+language en_US.UTF-8
 
 " Only do this part when compiled with support for autocommands. 
 if has("autocmd") 
@@ -141,6 +140,4 @@ let g:Tex_Env_align = "\\begin{align}\<CR><++>\<CR>\\end{align}"
 autocmd Filetype tex setlocal nofoldenable
 let g:Imap_UsePlaceHolders = 0
 
-set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
-
-colors jellybeans
+colors molokai

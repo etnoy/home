@@ -1,4 +1,11 @@
+
+" We like it dark
 set background=dark
-colorscheme jellybeans
-colors jellybeans
-set guifont=Consolas:h11
+
+" Give me some beautiful colors
+colors molokai
+
+" Use Consolas under windows
+if has('win32') || has('win64')
+	set guifont=Consolas:h11
+endif
