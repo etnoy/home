@@ -141,3 +141,6 @@ autocmd Filetype tex setlocal nofoldenable
 let g:Imap_UsePlaceHolders = 0
 
 colors molokai
+
+" Nice ESC
+imap öö <Esc>
