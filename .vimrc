@@ -45,9 +45,13 @@ set backspace=2
 map! <Esc>[3~ <Delete>
 map  <ESC>[3~    x
 
-set langmenu=en_US.UTF-8    " sets the language of the menu (gvim)
+if has('unix')
+	set langmenu=en_US.UTF-8    " sets the language of the menu (gvim)
+endif
 
-language en_US.UTF-8
+if has('win32') || has('win64')
+	language mes en
+endif
 
 " Only do this part when compiled with support for autocommands. 
 if has("autocmd") 
@@ -132,6 +136,7 @@ let g:Tex_IgnoredWarnings =
 \"Missing number, treated as zero.\n".
 \"There were undefined references\n".
 \"Citation %.%# undefined\n".
+\"Rerun to get cross-references right\n".
 \'LaTeX Font Warning:'"
 " This number N says that latex-suite should ignore the first N of the above.
 let g:Tex_IgnoreLevel = 8
