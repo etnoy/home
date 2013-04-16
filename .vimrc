@@ -142,5 +142,6 @@ let g:Imap_UsePlaceHolders = 0
 
 colors molokai
 
+set wildmode=longest,list
 " Nice ESC
 imap öö <Esc>
