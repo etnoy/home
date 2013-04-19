@@ -150,3 +150,5 @@ colors molokai
 set wildmode=longest,list
 " Nice ESC
 imap öö <Esc>
+map <f2> :w<cr><leader>ll
+imap <f2> <Esc>:w<cr><leader>ll
