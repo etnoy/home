@@ -137,9 +137,9 @@ let g:Tex_IgnoredWarnings =
 \"There were undefined references\n".
 \"Citation %.%# undefined\n".
 \"Rerun to get cross-references right\n".
-\'LaTeX Font Warning:'"
+\"LaTeX Font Warning:\n"
 " This number N says that latex-suite should ignore the first N of the above.
-let g:Tex_IgnoreLevel = 8
+let g:Tex_IgnoreLevel = 9
 let g:Tex_Env_theorem = "\\begin{theorem}\<CR><++>\<CR>\\end{theorem}"
 let g:Tex_Env_align = "\\begin{align}\<CR><++>\<CR>\\end{align}"
 autocmd Filetype tex setlocal nofoldenable
