@@ -123,6 +123,7 @@ let g:Tex_DefaultTargetFormat='pdf'
 let g:tex_flavor='latex'
 let g:Tex_CompileRule_dvi = 'latex -interaction=nonstopmode -file-line-error-style $*'
 let g:Tex_CompileRule_pdf = 'pdflatex -interaction=nonstopmode -file-line-error-style $*'
+let g:Tex_CompileRule_bib = 'biber -q $*'
 autocmd Filetype tex set textwidth=80
 autocmd Filetype tex set linebreak
 set hidden
