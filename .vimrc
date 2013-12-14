@@ -122,23 +122,20 @@ let g:tex_flavor='latex'
 let g:Tex_DefaultTargetFormat='pdf'
 let g:tex_flavor='latex'
 let g:Tex_CompileRule_dvi = 'latex -interaction=nonstopmode -file-line-error-style $*'
-let g:Tex_CompileRule_pdf = 'pdflatex -interaction=nonstopmode -file-line-error-style $*'
 let g:Tex_CompileRule_bib = 'biber -q $*'
-autocmd Filetype tex set textwidth=80
+let g:Tex_CompileRule_pdf = 'max_print_line=1000 pdflatex -interaction=nonstopmode -file-line-error-style $*'
 autocmd Filetype tex set linebreak
-set hidden
 
 " Set the warning messages to ignore.
 let g:Tex_IgnoredWarnings =
-\"Underfull\n".
-\"Overfull\n".
-\"specifier changed to\n".
-\"You have requested\n".
-\"Missing number, treated as zero.\n".
-\"There were undefined references\n".
-\"Citation %.%# undefined\n".
-\"Rerun to get cross-references right\n".
-\"LaTeX Font Warning:\n"
+\'Underfull'."\n".
+\'Overfull'."\n".
+\'specifier changed to'."\n".
+\'You have requested'."\n".
+\'Missing number, treated as zero.'."\n".
+\'There were undefined references'."\n".
+\'Latex Warning:'."\n".
+\'Citation %.%# undefined'
 " This number N says that latex-suite should ignore the first N of the above.
 let g:Tex_IgnoreLevel = 9
 let g:Tex_Env_theorem = "\\begin{theorem}\<CR><++>\<CR>\\end{theorem}"
