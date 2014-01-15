@@ -146,6 +146,10 @@ let g:Tex_IgnoreLevel = 9
 let g:Tex_Env_theorem = "\\begin{theorem}\<CR><++>\<CR>\\end{theorem}"
 let g:Tex_Env_align = "\\begin{align}\<CR><++>\<CR>\\end{align}"
 autocmd Filetype tex setlocal nofoldenable
+autocmd Filetype tex set colorcolumn=80
+autocmd Filetype tex set wrap
+autocmd Filetype tex set textwidth=80
+
 let g:Imap_UsePlaceHolders = 0
 
 colors molokai
