@@ -122,10 +122,14 @@ let g:tex_flavor='latex'
 let g:Tex_DefaultTargetFormat='pdf'
 let g:tex_flavor='latex'
 let g:Tex_CompileRule_dvi = 'latex -interaction=nonstopmode -file-line-error-style $*'
-let g:Tex_CompileRule_pdf = 'max_print_line=1000 pdflatex -interaction=nonstopmode -file-line-error-style $*'
-autocmd Filetype tex set textwidth=80
+let g:Tex_CompileRule_bib = 'biber -q $*'
+let g:Tex_BibtexFlavor = 'biber'
+if has('win32') || has('win64')
+	let g:Tex_CompileRule_pdf = 'pdflatex -interaction=nonstopmode -file-line-error-style $*'
+else
+	let g:Tex_CompileRule_pdf = 'max_print_line=1000 pdflatex -interaction=nonstopmode -file-line-error-style $*'
+endif
 autocmd Filetype tex set linebreak
-set hidden
 
 " Set the warning messages to ignore.
 let g:Tex_IgnoredWarnings =
@@ -142,6 +146,10 @@ let g:Tex_IgnoreLevel = 9
 let g:Tex_Env_theorem = "\\begin{theorem}\<CR><++>\<CR>\\end{theorem}"
 let g:Tex_Env_align = "\\begin{align}\<CR><++>\<CR>\\end{align}"
 autocmd Filetype tex setlocal nofoldenable
+autocmd Filetype tex set colorcolumn=80
+autocmd Filetype tex set wrap
+autocmd Filetype tex set textwidth=80
+
 let g:Imap_UsePlaceHolders = 0
 
 colors molokai
