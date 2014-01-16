@@ -123,7 +123,7 @@ let g:Tex_DefaultTargetFormat='pdf'
 let g:tex_flavor='latex'
 let g:Tex_CompileRule_dvi = 'latex -interaction=nonstopmode -file-line-error-style $*'
 let g:Tex_CompileRule_pdf = 'max_print_line=1000 pdflatex -interaction=nonstopmode -file-line-error-style $*'
-autocmd Filetype tex set textwidth=120
+autocmd Filetype tex set textwidth=80
 autocmd Filetype tex set linebreak
 set hidden
 
