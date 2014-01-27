@@ -159,3 +159,4 @@ set wildmode=longest,list
 imap öö <Esc>
 map <f2> :w<cr><leader>ll
 imap <f2> <Esc>:w<cr><leader>ll
+set autochdir
