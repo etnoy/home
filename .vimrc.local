@@ -67,4 +67,5 @@ let g:tex_comment_nospell=1
 colorscheme molokai
 set guioptions+=T
 set nofoldenable
-:set timeout timeoutlen=300000 ttimeoutlen=100
+set timeout timeoutlen=300000 ttimeoutlen=100
+autocmd FileType tex autocmd BufWritePre <buffer> :%s/\s\+$//e
