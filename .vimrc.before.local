@@ -13,4 +13,8 @@ let g:airline_powerline_fonts = 1
 set nofoldenable
 let s:donemappings =1
 let g:Imap_FreezeImap=1
+let g:latex_fold_enabled=1
+let g:Tex_FoldedSections=""
+let g:Tex_FoldedEnvironments=""
+let g:Tex_FoldedMisc=""
 imap <buffer> <leader>itsdf <Plug>Tex_InsertItemOnThisLine

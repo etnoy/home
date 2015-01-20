@@ -24,6 +24,10 @@ let g:Tex_IgnoredWarnings =
 " This number N says that latex-suite should ignore the first N of the above.
 set conceallevel=0
 let g:Tex_IgnoreLevel = 9
+let g:Tex_FoldedEnvironments=''
+let Tex_FoldedSections=""
+let Tex_FoldedEnvironments=""
+let Tex_FoldedMisc=""
 let g:Tex_Env_theorem = "\\begin{theorem}\<CR><++>\<CR>\\end{theorem}"
 let g:Tex_Env_align = "\\begin{align}\<CR><++>\<CR>\\end{align}"
 imap <buffer> <leader>itsdfsdf <Plug>Tex_InsertItemOnThisLine
