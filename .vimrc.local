@@ -33,3 +33,9 @@ autocmd Filetype tex set textwidth=80
 set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
 let g:tex_flavor='latex'
+map <f2> :w<cr><leader>ll
+imap <f2> <Esc>:w<cr><leader>ll
+let Tex_FoldedSections=""
+let Tex_FoldedEnvironments=""
+let Tex_FoldedMisc=""
+set conceallevel=0

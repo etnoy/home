@@ -3,4 +3,4 @@
 !.gitignore
 !.vimrc.local
 !.vimrc.before.local
-!.vimrc.bundles.local
+!.vimrc.bundle.local
