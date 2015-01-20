@@ -1,0 +1,9 @@
+let g:airline_powerline_fonts=0
+let g:Powerline_symbols = 'fancy'
+
+let g:spf13_leader='\'
+set langmenu=en_US
+let $LANG = 'en_US'
+
+filetype plugin indent on
+filetype plugin on

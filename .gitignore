@@ -1,7 +1,6 @@
-/*
+*
 
-!.vimrc
-!.gvimrc
 !.gitignore
-!.vim
-
+!.vimrc.local
+!.vimrc.before.local
+!.vimrc.bundles.local
