@@ -1,12 +1,11 @@
-
-set langmenu=en_US
-
+﻿
 let $LANG = 'en_US'
-
+set langmenu=en_US.UTF-8    " sets the language of the menu (gvim)
 "" let g:latex_view_method = 'sumatrapdf'
 
 let g:tex_flavor='latex'
 
+set conceallevel=0
 let g:Tex_DefaultTargetFormat='pdf'
 ""let g:Tex_MultipleCompileFormats = 'pdf'
 ""let g:Tex_CompileRule_pdf = 'arara -v $*'
@@ -23,6 +22,7 @@ let g:Tex_IgnoredWarnings =
 \'Latex Warning:'."\n".
 \'Citation %.%# undefined'
 " This number N says that latex-suite should ignore the first N of the above.
+set conceallevel=0
 let g:Tex_IgnoreLevel = 9
 let g:Tex_Env_theorem = "\\begin{theorem}\<CR><++>\<CR>\\end{theorem}"
 let g:Tex_Env_align = "\\begin{align}\<CR><++>\<CR>\\end{align}"
@@ -39,3 +39,20 @@ let Tex_FoldedSections=""
 let Tex_FoldedEnvironments=""
 let Tex_FoldedMisc=""
 set conceallevel=0
+
+  if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+  endif
+  let g:airline_powerline_fonts = 1
+
+  " unicode symbols
+let g:airline_left_sep = '⮀'
+let g:airline_left_alt_sep = '⮁'
+let g:airline_right_sep = '⮂'
+let g:airline_right_alt_sep = '⮃'
+let g:airline_branch_prefix = '⭠'
+let g:airline_readonly_symbol = '⭤'
+let g:airline_linecolumn_prefix = '⭡'
+set guifont=Consolas_for_Powerline_FixedD:h10:cANSI
+
+lang mes en

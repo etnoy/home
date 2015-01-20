@@ -1,10 +1,12 @@
-let g:airline_powerline_fonts=0
-let g:Powerline_symbols = 'fancy'
-
 let g:spf13_leader='\'
-set conceallevel=0
-set langmenu=en_US
+set encoding=utf-8
 let $LANG = 'en_US'
+set langmenu=en_US.UTF-8    " sets the language of the menu (gvim)
+language en                 " sets the language of the messages / ui (vim)
 
+
+set conceallevel=0
 filetype plugin indent on
 filetype plugin on
+set conceallevel=0
+lang mes en
