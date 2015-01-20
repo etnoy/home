@@ -26,18 +26,16 @@ set conceallevel=0
 let g:Tex_IgnoreLevel = 9
 let g:Tex_Env_theorem = "\\begin{theorem}\<CR><++>\<CR>\\end{theorem}"
 let g:Tex_Env_align = "\\begin{align}\<CR><++>\<CR>\\end{align}"
-autocmd Filetype tex setlocal nofoldenable
+imap <buffer> <leader>itsdfsdf <Plug>Tex_InsertItemOnThisLine
 autocmd Filetype tex set colorcolumn=80
 autocmd Filetype tex set wrap
 autocmd Filetype tex set textwidth=80
 set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
+let g:Tex_EnvironmentMaps = 0
 let g:tex_flavor='latex'
 map <f2> :w<cr><leader>ll
 imap <f2> <Esc>:w<cr><leader>ll
-let Tex_FoldedSections=""
-let Tex_FoldedEnvironments=""
-let Tex_FoldedMisc=""
 set conceallevel=0
 
 if LINUX()
@@ -59,4 +57,7 @@ if WINDOWS()
     set guifont=Consolas_for_Powerline_FixedD:h12:cANSI
     lang mes en
 endif
+let g:tex_comment_nospell=1
+colorscheme molokai
 set guioptions+=T
+set nofoldenable
