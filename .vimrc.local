@@ -12,9 +12,9 @@ let g:Tex_DefaultTargetFormat='pdf'
 if WINDOWS()
 
     let g:Tex_CompileRule_pdf = 'latexmk -f ~/.latexmkrcwin32 -pdf $*'
-    let g:Tex_CompileRule_pdf = 'latexmk -pdf $*'
+    let g:Tex_CompileRule_pdf = 'latexmk -f -pdf $*'
 else
-    let g:Tex_CompileRule_pdf = 'latexmk -pdf $*'
+    let g:Tex_CompileRule_pdf = 'latexmk -f -pdf $*'
 
 endif
 autocmd Filetype tex set linebreak
