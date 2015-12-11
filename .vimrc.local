@@ -7,16 +7,14 @@ let g:tex_flavor='latex'
 
 set conceallevel=0
 let g:Tex_DefaultTargetFormat='pdf'
-""let g:Tex_MultipleCompileFormats = 'pdf'
-""let g:Tex_CompileRule_pdf = 'arara -v $*'
-if WINDOWS()
+let g:Tex_CompileRule_pdf = 'latexmk -g -pdf $*'
 
     let g:Tex_CompileRule_pdf = 'latexmk -f ~/.latexmkrcwin32 -pdf $*'
     let g:Tex_CompileRule_pdf = 'latexmk -f -pdf $*'
-else
-    let g:Tex_CompileRule_pdf = 'latexmk -f -pdf $*'
+""if WINDOWS()
+""    let g:Tex_CompileRule_pdf = 'latexmk -f  ~/.latexmkrcwin32 -g  -pdf $*'
+""endif
 
-endif
 autocmd Filetype tex set linebreak
 " Set the warning messages to ignore.
 let g:Tex_IgnoredWarnings =
