@@ -5,3 +5,5 @@
 !.vimrc.before.local
 !.vimrc.bundle.local
 !.latexmkrc
+!.vim/
+.vim/bundle
