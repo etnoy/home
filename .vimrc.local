@@ -9,6 +9,8 @@ set conceallevel=0
 let g:Tex_DefaultTargetFormat='pdf'
 let g:Tex_CompileRule_pdf = 'latexmk -g -pdf $*'
 
+    let g:Tex_CompileRule_pdf = 'latexmk -f ~/.latexmkrcwin32 -pdf $*'
+    let g:Tex_CompileRule_pdf = 'latexmk -f -pdf $*'
 ""if WINDOWS()
 ""    let g:Tex_CompileRule_pdf = 'latexmk -f  ~/.latexmkrcwin32 -g  -pdf $*'
 ""endif
