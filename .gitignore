@@ -5,8 +5,3 @@
 !.vimrc.before.local
 !.vimrc.bundle.local
 !.latexmkrc
-!.spf13-vim-3/
-.spf13-vim-3/*
-!.spf13-vim-3/.vim/
-.spf13-vim-3/.vim/*
-!.spf13-vim-3/.vim/spell/
