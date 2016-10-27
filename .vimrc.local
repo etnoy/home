@@ -78,6 +78,7 @@ set guioptions+=T
 set nofoldenable
 set timeout timeoutlen=300000 ttimeoutlen=100
 autocmd FileType tex autocmd BufWritePre <buffer> :%s/\s\+$//e
+set smartcase
 set noerrorbells " don't whine
 set visualbell t_vb= " and don't make faces
 let g:Tex_Env_theorem = "\\begin{theorem}\<CR><++>\<CR>\\end{theorem}"
