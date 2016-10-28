@@ -1,2 +1,3 @@
-
 Bundle 'gerw/vim-latex-suite'
+Bundle 'vim-airline/vim-airline-themes'
+Bundle 'rodjek/vim-puppet'
