@@ -23,12 +23,13 @@ let g:Tex_IgnoredWarnings =
             \'specifier changed to'."\n".
             \'You have requested'."\n".
             \'Missing number, treated as zero.'."\n".
+            \'LaTeX Warning: Reference `%s’ on page %n undefined'.'\n'.
             \'There were undefined references'."\n".
-            \'Latex Warning:'."\n".
+            \'LaTeX Font Warning'."\n".
             \'Citation %.%# undefined'
 " This number N says that latex-suite should ignore the first N of the above.
-set conceallevel=0
 let g:Tex_IgnoreLevel = 9
+set conceallevel=0
 let g:Tex_FoldedEnvironments=''
 let Tex_FoldedSections=""
 let Tex_FoldedEnvironments=""
