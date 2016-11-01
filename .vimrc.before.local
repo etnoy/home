@@ -7,7 +7,6 @@ set fileencoding=utf-8
 let $LANG = 'en_US'
 set langmenu=en_US.UTF-8    " sets the language of the menu (gvim)
 
-
 set conceallevel=0
 filetype plugin indent on
 filetype plugin on
