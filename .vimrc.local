@@ -16,6 +16,7 @@ let g:Tex_CompileRule_pdf = 'latexmk -g -pdf $*'
 ""endif
 
 autocmd Filetype tex set linebreak
+autocmd Filetype txt set linebreak
 " Set the warning messages to ignore.
 let g:Tex_IgnoredWarnings =
             \'Underfull'."\n".
@@ -23,12 +24,13 @@ let g:Tex_IgnoredWarnings =
             \'specifier changed to'."\n".
             \'You have requested'."\n".
             \'Missing number, treated as zero.'."\n".
+            \'LaTeX Warning: Reference `%s’ on page %n undefined'.'\n'.
             \'There were undefined references'."\n".
-            \'Latex Warning:'."\n".
+            \'LaTeX Font Warning'."\n".
             \'Citation %.%# undefined'
 " This number N says that latex-suite should ignore the first N of the above.
-set conceallevel=0
 let g:Tex_IgnoreLevel = 9
+set conceallevel=0
 let g:Tex_FoldedEnvironments=''
 let Tex_FoldedSections=""
 let Tex_FoldedEnvironments=""
@@ -36,6 +38,9 @@ let Tex_FoldedMisc=""
 let g:Tex_Env_theorem = "\\begin{theorem}\<CR><++>\<CR>\\end{theorem}"
 let g:Tex_Env_align = "\\begin{align}\<CR><++>\<CR>\\end{align}"
 imap <buffer> <leader>itsdfsdf <Plug>Tex_InsertItemOnThisLine
+autocmd Filetype txt set colorcolumn=80
+autocmd Filetype txt set wrap
+autocmd Filetype txt set textwidth=80
 autocmd Filetype tex set colorcolumn=80
 autocmd Filetype tex set wrap
 autocmd Filetype tex set textwidth=80
