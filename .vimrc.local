@@ -80,3 +80,4 @@ set visualbell t_vb= " and don't make faces
 let g:Tex_Env_theorem = "\\begin{theorem}\<CR><++>\<CR>\\end{theorem}"
 let g:Tex_Env_align = "\\begin{align}\<CR><++>\<CR>\\end{align}"
 let g:Imap_UsePlaceHolders = 0
+let g:AutoPairsShortcutFastWrap=''
