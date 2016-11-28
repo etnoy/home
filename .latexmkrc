@@ -10,4 +10,4 @@ sub run_makeglossaries {
   }
 }
 
-$pdflatex = 'pdflatex -file-line-error-style -interaction=nonstopmode --max-print-line=1400';
+$pdflatex = 'pdflatex -file-line-error-style --shell-escape  -interaction=nonstopmode --max-print-line=1400';

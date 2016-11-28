@@ -1,13 +1,15 @@
 ﻿
 let $LANG = 'en_US'
 set langmenu=en_US.UTF-8    " sets the language of the menu (gvim)
-"" let g:latex_view_method = 'sumatrapdf'
+if WINDOWS()
+   let g:Tex_ViewRuleComplete_html= 'start C:\Program Files\SumatraPDF\SumatraPDF.exe $*'
+endif
 
 let g:tex_flavor='latex'
 
 set conceallevel=0
 let g:Tex_DefaultTargetFormat='pdf'
-let g:Tex_CompileRule_pdf = 'latexmk -g -f -pdf $*'
+let g:Tex_CompileRule_pdf = 'latexmk -g -f -pdf -pdflatex="pdflatex -file-line-error --shell-escape -synctex=1" $*'
 
 autocmd Filetype tex set linebreak
 autocmd Filetype txt set linebreak
