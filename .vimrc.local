@@ -9,7 +9,7 @@ let g:tex_flavor='latex'
 
 set conceallevel=0
 let g:Tex_DefaultTargetFormat='pdf'
-let g:Tex_CompileRule_pdf = 'latexmk -g -f -pdf -pdflatex="pdflatex -file-line-error --shell-escape -synctex=1" $*'
+let g:Tex_CompileRule_pdf = 'latexmk -g -f -pdf -pdflatex="pdflatex --synctex=1 --interaction=nonstopmode --file-line-error --shell-escape" $*'
 
 autocmd Filetype tex set linebreak
 autocmd Filetype txt set linebreak
@@ -83,3 +83,4 @@ let g:Tex_Env_align = "\\begin{align}\<CR><++>\<CR>\\end{align}"
 let g:Imap_UsePlaceHolders = 0
 let g:AutoPairsShortcutFastWrap=''
 let g:neocomplete#enable_at_startup = 0
+let g:syntastic_auto_jump = 0
