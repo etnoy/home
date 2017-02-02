@@ -84,3 +84,4 @@ let g:Imap_UsePlaceHolders = 0
 let g:AutoPairsShortcutFastWrap=''
 let g:neocomplete#enable_at_startup = 0
 let g:syntastic_auto_jump = 0
+let &runtimepath=($HOME."/.vim/bundle/vundle," . &runtimepath)
