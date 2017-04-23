@@ -20,3 +20,4 @@ let g:Tex_FoldedEnvironments=""
 let g:Tex_FoldedMisc=""
 imap <buffer> <leader>itsdf <Plug>Tex_InsertItemOnThisLine
 let g:Tex_UsePython=0
+nnoremap <F12> :e ++enc=utf-8<CR>

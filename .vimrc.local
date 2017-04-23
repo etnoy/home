@@ -9,10 +9,9 @@ let g:tex_flavor='latex'
 
 set conceallevel=0
 let g:Tex_DefaultTargetFormat='pdf'
-let g:Tex_CompileRule_pdf = 'latexmk -g -f -pdf -pdflatex="pdflatex -file-line-error --shell-escape -synctex=1" $*'
+let g:Tex_CompileRule_pdf = 'latexmk -g -f -pdf -pdflatex="pdflatex --synctex=1 --interaction=nonstopmode --file-line-error --shell-escape" $*'
 
-autocmd Filetype tex set linebreak
-autocmd Filetype txt set linebreak
+au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
 " Set the warning messages to ignore.
 let g:Tex_IgnoredWarnings =
             \'Underfull'."\n".
@@ -23,9 +22,9 @@ let g:Tex_IgnoredWarnings =
             \'LaTeX Warning: Reference `%s’ on page %n undefined'.'\n'.
             \'There were undefined references'."\n".
             \'LaTeX Font Warning'."\n".
-            \'Citation %.%# undefined'
+            \'Citation %.%# undefined'."\n"
 " This number N says that latex-suite should ignore the first N of the above.
-let g:Tex_IgnoreLevel = 9
+let g:Tex_IgnoreLevel = 10
 set conceallevel=0
 let g:Tex_FoldedEnvironments=''
 let Tex_FoldedSections=""
@@ -34,12 +33,15 @@ let Tex_FoldedMisc=""
 let g:Tex_Env_theorem = "\\begin{theorem}\<CR><++>\<CR>\\end{theorem}"
 let g:Tex_Env_align = "\\begin{align}\<CR><++>\<CR>\\end{align}"
 imap <buffer> <leader>itsdfsdf <Plug>Tex_InsertItemOnThisLine
+autocmd Filetype tex set linebreak
+autocmd Filetype txt set linebreak
+autocmd Filetype md set linebreak
 autocmd Filetype txt set colorcolumn=80
 autocmd Filetype txt set wrap
 autocmd Filetype txt set textwidth=80
-autocmd Filetype tex set colorcolumn=80
-autocmd Filetype tex set wrap
 autocmd Filetype tex set textwidth=80
+autocmd Filetype md set textwidth=80
+autocmd Filetype md set colorcolumn=80
 set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
 let g:Tex_EnvironmentMaps = 0
@@ -83,3 +85,5 @@ let g:Tex_Env_align = "\\begin{align}\<CR><++>\<CR>\\end{align}"
 let g:Imap_UsePlaceHolders = 0
 let g:AutoPairsShortcutFastWrap=''
 let g:neocomplete#enable_at_startup = 0
+let g:syntastic_auto_jump = 0
+let &runtimepath=($HOME."/.vim/bundle/vundle," . &runtimepath)
