@@ -35,13 +35,13 @@ let g:Tex_Env_align = "\\begin{align}\<CR><++>\<CR>\\end{align}"
 imap <buffer> <leader>itsdfsdf <Plug>Tex_InsertItemOnThisLine
 autocmd Filetype tex set linebreak
 autocmd Filetype txt set linebreak
-autocmd Filetype md set linebreak
+autocmd Filetype markdown set linebreak
 autocmd Filetype txt set colorcolumn=80
 autocmd Filetype txt set wrap
 autocmd Filetype txt set textwidth=80
 autocmd Filetype tex set textwidth=80
-autocmd Filetype md set textwidth=80
-autocmd Filetype md set colorcolumn=80
+autocmd Filetype markdown set textwidth=80
+autocmd Filetype markdown set colorcolumn=80
 set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
 let g:Tex_EnvironmentMaps = 0
@@ -76,7 +76,6 @@ colorscheme molokai
 set guioptions+=T
 set nofoldenable
 set timeout timeoutlen=300000 ttimeoutlen=100
-autocmd FileType tex autocmd BufWritePre <buffer> :%s/\s\+$//e
 set smartcase
 set noerrorbells " don't whine
 set visualbell t_vb= " and don't make faces
