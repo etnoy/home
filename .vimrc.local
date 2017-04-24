@@ -10,6 +10,9 @@ let g:tex_flavor='latex'
 set conceallevel=0
 let g:Tex_DefaultTargetFormat='pdf'
 let g:Tex_CompileRule_pdf = 'latexmk -g -f -pdf -pdflatex="pdflatex --synctex=1 --interaction=nonstopmode --file-line-error --shell-escape" $*'
+function SetXeTex()
+    let g:Tex_CompileRule_pdf = 'latexmk -g -f -pdf -xelatex $*'
+endfunction
 
 au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
 " Set the warning messages to ignore.
@@ -55,6 +58,9 @@ map <f1> :w
 imap <f1> <Esc>:w
 map <f2> :w<cr><leader>ll
 imap <f2> <Esc>:w<cr><leader>ll
+
+map <f3> :call SetXeTex()<cr>
+
 set conceallevel=0
 
 if LINUX()
