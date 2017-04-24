@@ -1,9 +1,9 @@
 *
 
 !.gitignore
+!.gitattributes
 !.vimrc.local
 !.vimrc.before.local
 !.vimrc.bundle.local
 !.latexmkrc
-!.vim/bundle/vundle/spell/en.utf-8.add
-!.vim/bundle/vundle/spell/sv.utf-8.add
+!.vim/bundle/vundle/spell/*.utf-8.add
