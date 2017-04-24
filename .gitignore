@@ -6,6 +6,4 @@
 !.vimrc.bundle.local
 !.latexmkrc
 !.vim/bundle/vundle/spell/en.utf-8.add
-!.vim/bundle/vundle/spell/en.utf-8.add.spl
-!.vim/bundle/vundle/spell/sv.utf-8.spl
-!.vim/bundle/vundle/spell/sv.utf-8.sug
+!.vim/bundle/vundle/spell/sv.utf-8.add
