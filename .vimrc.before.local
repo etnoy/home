@@ -21,3 +21,10 @@ let g:Tex_FoldedMisc=""
 imap <buffer> <leader>itsdf <Plug>Tex_InsertItemOnThisLine
 let g:Tex_UsePython=0
 nnoremap <F12> :e ++enc=utf-8<CR>
+
+"Rebuild vim spell file when updated from git
+for d in glob('~/.vim/bundle/vundle/spell/*.add', 1, 1)
+    if filereadable(d) && (!filereadable(d . '.spl') || getftime(d) > getftime(d . '.spl'))
+        exec 'mkspell! ' . fnameescape(d)
+    endif
+endfor
