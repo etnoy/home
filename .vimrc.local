@@ -40,10 +40,10 @@ imap <buffer> <leader>itsdfsdf <Plug>Tex_InsertItemOnThisLine
 autocmd Filetype tex set linebreak
 autocmd Filetype tex set textwidth=80
 
-autocmd Filetype txt set linebreak
-autocmd Filetype txt set colorcolumn=80
-autocmd Filetype txt set wrap
-autocmd Filetype txt set textwidth=80
+autocmd Filetype text set linebreak
+autocmd Filetype text set colorcolumn=80
+autocmd Filetype text set wrap
+autocmd Filetype text set textwidth=80
 
 autocmd Filetype markdown set wrap
 autocmd Filetype markdown set linebreak
@@ -97,3 +97,4 @@ let g:AutoPairsShortcutFastWrap=''
 let g:neocomplete#enable_at_startup = 0
 let g:syntastic_auto_jump = 0
 let &runtimepath=($HOME."/.vim/bundle/vundle," . &runtimepath)
+let g:Tex_GotoError=0
