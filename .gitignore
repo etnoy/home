@@ -6,4 +6,5 @@
 !.vimrc.before.local
 !.vimrc.bundle.local
 !.latexmkrc
+!.chktexrc
 !.vim/bundle/vundle/spell/*.utf-8.add
