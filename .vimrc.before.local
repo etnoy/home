@@ -14,12 +14,6 @@ au BufRead,BufNewFile *.pp   setfiletype puppet
 set nofoldenable
 let s:donemappings =1
 let g:Imap_FreezeImap=1
-"let g:latex_fold_enabled=1
-"let g:Tex_FoldedSections=""
-"let g:Tex_FoldedEnvironments=""
-"let g:Tex_FoldedMisc=""
-"imap <buffer> <leader>itsdf <Plug>Tex_InsertItemOnThisLine
-"let g:Tex_UsePython=0
 nnoremap <F12> :e ++enc=utf-8<CR>
 
 "Rebuild vim spell file when updated from git

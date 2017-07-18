@@ -3,41 +3,12 @@ let $LANG = 'en_US'
 set langmenu=en_US.UTF-8    " sets the language of the menu (gvim)
 if WINDOWS()
     let g:vimtex_view_general_viewer = 'sumatrapdf'
-"   let g:Tex_ViewRuleComplete_html= 'start C:\Program Files\SumatraPDF\SumatraPDF.exe $*'
 endif
 
-"let g:tex_flavor='latex'
 
 set conceallevel=0
-"let g:Tex_DefaultTargetFormat='pdf'
-"let g:Tex_CompileRule_pdf = 'latexmk -g -f -pdf -pdflatex="pdflatex --synctex=1 --interaction=nonstopmode --file-line-error --shell-escape" $*'
-"function SetXeTex()
-"    let g:Tex_CompileRule_pdf = 'latexmk -g -f -pdf -xelatex $*'
-"endfunction
 
 au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
-" Set the warning messages to ignore.
-let g:Tex_IgnoredWarnings =
-            \'Underfull'."\n".
-            \'Overfull'."\n".
-            \'specifier changed to'."\n".
-            \'You have requested'."\n".
-            \'Missing number, treated as zero.'."\n".
-            \'LaTeX Warning: Reference `%s’ on page %n undefined'.'\n'.
-            \'There were undefined references'."\n".
-            \'LaTeX Font Warning'."\n".
-            \'Citation %.%# undefined'."\n"
-" This number N says that latex-suite should ignore the first N of the above.
-"let g:Tex_IgnoreLevel = 10
-"set conceallevel=0
-"let g:Tex_FoldedEnvironments=''
-"let g:Tex_UseMakefile = 0
-"let Tex_FoldedSections=""
-"let Tex_FoldedEnvironments=""
-"let Tex_FoldedMisc=""
-"let g:Tex_Env_theorem = "\\begin{theorem}\<CR><++>\<CR>\\end{theorem}"
-"let g:Tex_Env_align = "\\begin{align}\<CR><++>\<CR>\\end{align}"
-"imap <buffer> <leader>itsdfsdf <Plug>Tex_InsertItemOnThisLine
 autocmd Filetype tex set linebreak
 autocmd Filetype tex set textwidth=80
 
@@ -53,14 +24,8 @@ autocmd Filetype markdown set colorcolumn=80
 
 set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
-"let g:Tex_EnvironmentMaps = 0
-"let g:tex_flavor='latex'
 map <f1> :w
 imap <f1> <Esc>:w
-"map <f2> :w<cr><leader>ll
-"imap <f2> <Esc>:w<cr><leader>ll
-
-"map <f3> :call SetXeTex()<cr>
 
 set conceallevel=0
 
@@ -83,7 +48,6 @@ if WINDOWS()
     set guifont=Consolas_for_Powerline_FixedD:h12:cANSI
     lang mes en
 endif
-let g:tex_comment_nospell=1
 colorscheme molokai
 set guioptions+=T
 set nofoldenable
@@ -91,14 +55,11 @@ set timeout timeoutlen=300000 ttimeoutlen=100
 set smartcase
 set noerrorbells " don't whine
 set visualbell t_vb= " and don't make faces
-"let g:Tex_Env_theorem = "\\begin{theorem}\<CR><++>\<CR>\\end{theorem}"
-"let g:Tex_Env_align = "\\begin{align}\<CR><++>\<CR>\\end{align}"
 let g:Imap_UsePlaceHolders = 0
 let g:AutoPairsShortcutFastWrap=''
 let g:neocomplete#enable_at_startup = 0
 let g:syntastic_auto_jump = 0
 let &runtimepath=($HOME."/.vim/bundle/vundle," . &runtimepath)
-"let g:Tex_GotoError=0
 let g:syntastic_tex_chktex_args = ("-l \"".$HOME."\\.chktexrc\"")
 
 let mapleader="\\"
