@@ -22,3 +22,4 @@ for d in glob('~/.vim/bundle/vundle/spell/*.add', 1, 1)
         exec 'mkspell! ' . fnameescape(d)
     endif
 endfor
+let g:spf13_bundle_groups=['general', 'writing', 'programming', 'php', 'ruby', 'python', 'javascript', 'html', 'misc','youcompleteme']
