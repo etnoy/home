@@ -59,8 +59,8 @@ let g:Imap_UsePlaceHolders = 0
 let g:AutoPairsShortcutFastWrap=''
 "let g:neocomplete#enable_at_startup = 0
 let g:syntastic_auto_jump = 0
-let &runtimepath=($HOME."/.vim/bundle/vundle," . &runtimepath)
 let &runtimepath=($HOME."/.vim/snippets," . &runtimepath)
+let &runtimepath=($HOME."/.vim/bundle/vundle," . &runtimepath)
 let g:syntastic_tex_chktex_args = ("-l \"".$HOME."\\.chktexrc\"")
 
 let mapleader="\\"
@@ -73,8 +73,4 @@ let g:vimtex_quickfix_latexlog = {
 let g:vimtex_quickfix_open_on_warning = 0
 let g:vimtex_view_automatic = 0
 
-if !exists('g:ycm_semantic_triggers')
-    let g:ycm_semantic_triggers = {}
-endif
-let g:ycm_semantic_triggers.tex = g:vimtex#re#youcompleteme
 set wildmode=longest,list
