@@ -1,0 +1,22 @@
+WipeArg
+{
+    \label:[]{} \ref:{} \eqref:{} \vref:{} \pageref:{} \index:[]{}
+    \cite:[][]{} \nocite:{}
+    \input:{} \verbatiminput:[]{} \listinginput:[]{}{}
+    \verbatimtabinput:[]{} \include:{} \includeonly:{}
+    \bibitem:[]{}
+    \cline:{} \cmidrule:[](){}
+    \href:{}{}
+    # Cleveref -- there are many others that could be here as well...
+    \cref:*{} \cpageref:*{} \crefrange:*{}{} \cpagerefrange:*{}{}
+    \Cref:*{} \Cpageref:*{} \Crefrange:*{}{} \Cpagerefrange:*{}{}
+    # natbib
+    \citet:*[][]{} \citep:*[][]{} \citealt:*{} \citealp:*[]{} \citeauthor:*{}
+    \Citet:*[][]{} \Citep:*[][]{} \Citealt:*{} \Citealp:*[]{} \Citeauthor:{}
+    \citetext:{} \citeyear:*{} \citeyearpar:{}
+    # tipa which uses "
+    \textipa:{}
+}
+
+# Exclude these environments from syntax checking
+VerbEnvir { chktex-ignore }
