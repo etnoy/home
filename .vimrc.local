@@ -11,6 +11,8 @@ set conceallevel=0
 au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
 autocmd Filetype tex set linebreak
 autocmd Filetype tex set textwidth=80
+autocmd Filetype tex set colorcolumn=80
+autocmd Filetype tex set wrap
 
 autocmd Filetype text set linebreak
 autocmd Filetype text set colorcolumn=80
