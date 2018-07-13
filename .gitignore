@@ -9,4 +9,4 @@
 !.vim/snippets/UltiSnips/*.snippets
 !.profile
 !.EverVim/bundle/vim-surround/spell/*.utf-8.add
-!.EverVim.vinrc
+!.EverVim.vimrc
