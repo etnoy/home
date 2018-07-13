@@ -1,4 +1,0 @@
-UnBundle 'gerw/vim-latex-suite'
-Bundle 'rodjek/vim-puppet'
-UnBundle 'mhinz/vim-signify'
-Bundle 'lervag/vimtex'

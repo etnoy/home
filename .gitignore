@@ -6,7 +6,7 @@
 !.vimrc.before.local
 !.vimrc.bundle.local
 !.chktexrc
-!.vim/bundle/vundle/spell/*.utf-8.add
 !.vim/snippets/UltiSnips/*.snippets
 !.profile
-!.bash_profile
+!.EverVim/bundle/vim-surround/spell/*.utf-8.add
+!.EverVim.vinrc
