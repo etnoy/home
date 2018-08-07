@@ -1,8 +1,5 @@
 let $LANG = 'en_US'
 set langmenu=en_US.UTF-8    " sets the language of the menu (gvim)
-if WINDOWS()
-    let g:vimtex_view_general_viewer = 'sumatrapdf'
-endif
 
 set conceallevel=0
 
@@ -47,10 +44,13 @@ if WINDOWS()
     let g:airline_linecolumn_prefix = '⭡'
     set guifont=Consolas_for_Powerline_FixedD:h12:cANSI
     lang mes en
+    let g:vimtex_view_general_viewer = 'sumatrapdf'
 endif
-colorscheme molokai
+let g:evervim_color_theme = "molokai"
+let g:evervim_airline_theme = "molokai"
 set guioptions+=T
-set nofoldenable
+let g:vim_markdown_folding_disabled = 1
+
 set timeout timeoutlen=300000 ttimeoutlen=100
 set smartcase
 set noerrorbells " don't whine
@@ -63,8 +63,6 @@ let &runtimepath=($HOME."/.vim/snippets," . &runtimepath)
 let &runtimepath=($HOME."/.vim/bundle/vundle," . &runtimepath)
 let g:syntastic_tex_chktex_args = ("-l \"".$HOME."\\.chktexrc\"")
 
-let mapleader="\\"
-let maplocalleader="\\"
 let g:vimtex_quickfix_latexlog = {
             \ 'overfull' : 0,
             \ 'underfull' : 0,
@@ -93,10 +91,14 @@ let g:ycm_key_list_select_completion = ['<TAB>']
 let g:ycm_key_list_previous_completion = ['<S-TAB>']
 let g:ycm_key_list_stop_completion = ['<C-y>', '<UP>', '<DOWN>']
 
-
 let g:evervim_bundle_groups=['general', 'appearance', 'writing', 'youcompleteme', 'programming', 'python', 'javascript', 'typescript', 'html', 'css', 'misc', 'go', 'rust', 'cpp', 'lua', 'youcompleteme']
 
 let g:override_evervim_bundles = 1
 
-let g:evervim_leader='\\'
-let g:evervim_localleader=';'
+set nofoldenable
+
+let g:tex_flavor='latex'
+let g:vimtex_view_general_viewer = 'SumatraPDF.exe'
+let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
+let g:vimtex_view_general_options_latexmk = '--unique'
+let g:vimtex_compiler_progname = v:progname
