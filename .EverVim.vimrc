@@ -1,10 +1,8 @@
-﻿
 let $LANG = 'en_US'
 set langmenu=en_US.UTF-8    " sets the language of the menu (gvim)
 if WINDOWS()
     let g:vimtex_view_general_viewer = 'sumatrapdf'
 endif
-
 
 set conceallevel=0
 
@@ -94,3 +92,11 @@ let g:vimtex_compiler_latexmk = {
 let g:ycm_key_list_select_completion = ['<TAB>']
 let g:ycm_key_list_previous_completion = ['<S-TAB>']
 let g:ycm_key_list_stop_completion = ['<C-y>', '<UP>', '<DOWN>']
+
+
+let g:evervim_bundle_groups=['general', 'appearance', 'writing', 'youcompleteme', 'programming', 'python', 'javascript', 'typescript', 'html', 'css', 'misc', 'go', 'rust', 'cpp', 'lua', 'youcompleteme']
+
+let g:override_evervim_bundles = 1
+
+let g:evervim_leader='\\'
+let g:evervim_localleader=';'
