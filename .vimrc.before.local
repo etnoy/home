@@ -20,3 +20,4 @@ for d in glob('~/.vim/bundle/vim-surround/spell/*.add', 1, 1)
     endif
 endfor
 let g:evervim_bundle_groups=['general', 'writing', 'programming', 'php', 'ruby', 'python', 'youcompleteme', 'javascript', 'html', 'misc']
+let g:override_evervim_bundles = 1

@@ -9,3 +9,4 @@
 !.EverVim/bundle/vim-surround/spell/*.utf-8.add
 !.EverVim.vimrc
 !.EverVim.bundles
+!.vimrc.after
