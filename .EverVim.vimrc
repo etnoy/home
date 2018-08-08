@@ -30,19 +30,6 @@ if LINUX()
     set guifont=Source\ Code\ Pro\ for\ Powerline\ Medium\ 12
 endif
 if WINDOWS()
-    if !exists('g:airline_symbols')
-        let g:airline_symbols = {}
-    endif
-
-    " unicode symbols
-    let g:airline_left_sep = '⮀'
-    let g:airline_left_alt_sep = '⮁'
-    let g:airline_right_sep = '⮂'
-    let g:airline_right_alt_sep = '⮃'
-    let g:airline_branch_prefix = '⭠'
-    let g:airline_readonly_symbol = '⭤'
-    let g:airline_linecolumn_prefix = '⭡'
-    set guifont=Consolas_for_Powerline_FixedD:h12:cANSI
     lang mes en
     let g:vimtex_view_general_viewer = 'sumatrapdf'
 endif
