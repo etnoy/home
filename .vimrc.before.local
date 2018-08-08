@@ -14,9 +14,9 @@ let g:Imap_FreezeImap=1
 nnoremap <F12> :e ++enc=utf-8<CR>
 
 "Rebuild vim spell file when updated from git
-"for d in glob('~/.vim/bundle/vundle/spell/*.add', 1, 1)
-"    if filereadable(d) && (!filereadable(d . '.spl') || getftime(d) > getftime(d . '.spl'))
-"        exec 'mkspell! ' . fnameescape(d)
-"    endif
-"endfor
+for d in glob('~/.vim/bundle/vim-surround/spell/*.add', 1, 1)
+    if filereadable(d) && (!filereadable(d . '.spl') || getftime(d) > getftime(d . '.spl'))
+        exec 'mkspell! ' . fnameescape(d)
+    endif
+endfor
 let g:evervim_bundle_groups=['general', 'writing', 'programming', 'php', 'ruby', 'python', 'youcompleteme', 'javascript', 'html', 'misc']

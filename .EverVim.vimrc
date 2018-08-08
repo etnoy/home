@@ -46,9 +46,6 @@ if WINDOWS()
     lang mes en
     let g:vimtex_view_general_viewer = 'sumatrapdf'
 endif
-let g:evervim_color_theme = "molokai"
-let g:evervim_airline_theme = "molokai"
-set guioptions+=T
 let g:vim_markdown_folding_disabled = 1
 
 set timeout timeoutlen=300000 ttimeoutlen=100
@@ -102,3 +99,5 @@ let g:vimtex_view_general_viewer = 'SumatraPDF.exe'
 let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
 let g:vimtex_view_general_options_latexmk = '--unique'
 let g:vimtex_compiler_progname = v:progname
+set guioptions+=T
+colorscheme molokai
