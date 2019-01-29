@@ -1,2 +1,3 @@
 Plug 'lervag/vimtex'
 Plug 'tomasr/molokai'
+Plug 'rodjek/vim-puppet'
