@@ -33,6 +33,14 @@ if WINDOWS()
     lang mes en
     let g:vimtex_view_general_viewer = 'sumatrapdf'
 endif
+if has("gui_running")
+    
+else
+    let g:loaded_youcompleteme = 1
+    let g:UltiSnipsEnableSnipMate = 0
+    let g:loaded_airline = 1
+endif
+let g:UltiSnipsNoPythonWarning = 1
 let g:vim_markdown_folding_disabled = 1
 
 set timeout timeoutlen=300000 ttimeoutlen=100
@@ -75,7 +83,7 @@ let g:ycm_key_list_select_completion = ['<TAB>']
 let g:ycm_key_list_previous_completion = ['<S-TAB>']
 let g:ycm_key_list_stop_completion = ['<C-y>', '<UP>', '<DOWN>']
 
-let g:evervim_bundle_groups=['general', 'appearance', 'writing', 'youcompleteme', 'programming', 'python', 'javascript', 'typescript', 'html', 'css', 'misc', 'go', 'rust', 'cpp', 'lua', 'youcompleteme']
+let g:evervim_bundle_groups=['general', 'appearance', 'writing', 'youcompleteme', 'programming', 'python', 'javascript', 'typescript', 'html', 'css', 'misc', 'go', 'rust', 'cpp', 'lua']
 
 let g:override_evervim_bundles = 1
 
