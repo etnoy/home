@@ -16,3 +16,4 @@ if [ ! "$SSH_AUTH_SOCK" ] || [ $agent_run_state = 2 ]; then
 fi
 
 unset env
+export DISPLAY=127.0.0.1:0.0
