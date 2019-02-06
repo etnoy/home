@@ -95,3 +95,7 @@ let g:vimtex_view_general_options_latexmk = '--unique'
 let g:vimtex_compiler_progname = v:progname
 let g:evervim_color_theme="molokai"
 let g:evervim_airline_theme="molokai"
+
+let g:autoformat_autoindent = 0
+let g:autoformat_retab = 0
+
